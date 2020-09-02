@@ -122,4 +122,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'  # Default CSS Framework for forms
+
+LOGIN_REDIRECT_URL = 'blog-home'  # URL redirected to after login
+LOGIN_URL = 'login'               # Redirect URL for authenticated routes
