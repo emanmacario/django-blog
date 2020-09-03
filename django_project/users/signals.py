@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 from django.dispatch import receiver
 from .models import Profile
 
+# For info on specific arguments sent by signals:
+# https://docs.djangoproject.com/en/3.1/ref/signals/
+
 @receiver(post_save, sender=User)
 def create_profile(sender, instance, created, **kwargs):
     if created:
