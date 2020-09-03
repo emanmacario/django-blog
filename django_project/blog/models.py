@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 # Each class is own table in database
 # Each attribute is different field in database
@@ -18,4 +19,8 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        # Returns full path of post as a string
+        return reverse('post-detail', kwargs={'pk': self.pk})
 
