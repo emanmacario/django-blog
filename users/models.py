@@ -9,15 +9,15 @@ class Profile(models.Model):
     def __str__(self):
         return f'{self.user.username} Profile'
 
-    def save(self, *args, **kwargs):
-        """
-        Overrides save method of Profile model, resizes user profile pictures
-        """
-        super().save(*args, **kwargs)
+    # def save(self, *args, **kwargs):
+    #     """
+    #     Overrides save method of Profile model, resizes user profile pictures
+    #     """
+    #     super().save(*args, **kwargs)
 
-        im = Image.open(self.image.path)
+    #     im = Image.open(self.image.path)
 
-        if im.height > 300 or im.width > 300:
-            output_size = (300, 300)
-            im.thumbnail(output_size, Image.ANTIALIAS)
-            im.save(self.image.path)
+    #     if im.height > 300 or im.width > 300:
+    #         output_size = (300, 300)
+    #         im.thumbnail(output_size, Image.ANTIALIAS)
+    #         im.save(self.image.path)
