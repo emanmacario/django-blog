@@ -25,7 +25,7 @@ SECRET_KEY = '*_8%r3--fg!$xjd1i4duu!!b4b9x0ifn^q^w8)zr&h(8qqwyj!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'hackerjourney.herokuapp.com']
 
 
 # Application definition
