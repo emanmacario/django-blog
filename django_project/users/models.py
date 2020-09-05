@@ -9,11 +9,11 @@ class Profile(models.Model):
     def __str__(self):
         return f'{self.user.username} Profile'
 
-    def save(self):
+    def save(self, *args, **kwargs):
         """
         Overrides save method of Profile model, resizes user profile pictures
         """
-        super().save()
+        super().save(*args, **kwargs)
 
         im = Image.open(self.image.path)
 
