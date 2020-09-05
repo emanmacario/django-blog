@@ -1,6 +1,11 @@
 .venv/
 *__pycache__
 
+# Django development
+*.sqlite3
+
+# Django production
+
 # Project related
 *profile_pics
 posts.json
