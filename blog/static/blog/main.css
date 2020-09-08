@@ -74,7 +74,7 @@ a.article-title:hover {
 }
 
 .account-img {
-    object-fit: cover;
+    object-fit: contain;
     height: 125px;
     width: 125px;
     margin-right: 20px;
