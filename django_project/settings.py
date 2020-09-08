@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
+import django_heroku
 from pathlib import Path
 
 from django.conf.global_settings import DEFAULT_FILE_STORAGE
@@ -159,3 +160,8 @@ AWS_S3_REGION_NAME = os.environ.get('AWS_S3_REGION_NAME')
 # Additional django-storage S3 settings
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
+
+
+# Automatically configure Django application to work on Heroku
+# https://devcenter.heroku.com/articles/django-app-configuration
+django_heroku.settings(locals())
