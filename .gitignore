@@ -5,6 +5,7 @@
 *.sqlite3
 
 # Django production
+deployLocally.txt
 
 # Project related
 *profile_pics
